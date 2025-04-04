@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <script defer src="/js/main.js"></script>
+  <title>NewsPortal</title>
+</head>
+<body>
+  <!-- Include the Navbar -->
+  <%- include('partials/navbar.ejs') %>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Discover the Latest News</h1>
+      <p>Stay informed with top stories from around the world, powered by the New York Times API.</p>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section class="news-section">
+    <h2>Top Stories</h2>
+    <div id="news-grid">
+      <!-- News articles will be dynamically inserted here -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 NewsPortal. All rights reserved.</p>
+  </footer>
+</body>
+</html>

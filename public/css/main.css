@@ -1,0 +1,351 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f9fafb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 16px 32px;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: #374151;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #3b82f6;
+}
+
+.navbar-toggler {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 220px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+        border-radius: 8px;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #0f172a, #1e40af);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* News Section */
+.news-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-section h2 {
+    text-align: center;
+    font-size: 2.75rem;
+    color: #111827;
+    margin-bottom: 40px;
+}
+
+#news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.news-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.news-card .content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.news-card .content h3 {
+    font-size: 1.3rem;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.news-card .content p {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+.news-card .content a {
+    margin-top: 16px;
+    font-weight: 600;
+    color: #3b82f6;
+}
+
+.news-card .content a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.contact-section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1e3c72;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  text-align: center;
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3b82f6;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #1e3c72;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #3b82f6;
+}
+
+/* Admin Section */
+.admin-section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.admin-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1e3c72;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+#messages-list {
+  list-style: none;
+  padding: 0;
+}
+
+#messages-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#messages-list li:last-child {
+  border-bottom: none;
+}
+
+/* Messages Section */
+#admin-messages {
+  margin-top: 20px;
+}
+
+#admin-messages h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #1e3c72;
+  margin-bottom: 20px;
+}
+
+#messages-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.message-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.message-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.message-card h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.message-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.message-card .email {
+  font-size: 0.9rem;
+  color: #007bff;
+  margin-top: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.message-card .email:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 24px;
+    font-size: 0.95rem;
+    margin-top: 60px;
+}
